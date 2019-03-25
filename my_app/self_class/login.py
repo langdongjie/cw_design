@@ -6,8 +6,15 @@ import pickle
 # pkl_file.close()
 
 class LoginManager:
+    username = ""
     def __init__(self):
         self.user_dict = {}
+
+    def get_username(self):
+        return LoginManager.username
+
+    def set_username(self, username):
+        LoginManager.username = username
 
     def login(self, user, pwd):
         pkl_file = open('./my_app/data.pkl', 'rb')

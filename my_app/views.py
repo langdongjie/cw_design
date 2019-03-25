@@ -5,7 +5,6 @@ from django.http import HttpResponse
 from .self_class.recognition import Recognition
 from .self_class.login import LoginManager
 
-global current_user
 
 def login(request):
     if request.method == 'GET':
@@ -15,9 +14,9 @@ def login(request):
         password = request.POST.get('password')
         login_manager = LoginManager()
         if login_manager.login(username, password):
-            global current_user
-            current_user = username
-            return render(request, "index.html")
+            print(username)
+            LoginManager.username = username
+            return render(request, "index.html", {"username": LoginManager.username})
     return render(request, "login.html", {"message": "密码输入错误或用户名不存在"})
 
 
@@ -41,27 +40,30 @@ def textMining(request):
         re = Recognition(url)
         wordcloud_path = re.get_wordcloud()
         summary_str = re.get_summary(3)
-    return render(request, "textMining.html", {"url": url, "wordcloud": wordcloud_path, "summary": summary_str})
+    return render(request, "textMining.html", {"url": url,
+                                               "wordcloud": wordcloud_path,
+                                               "summary": summary_str,
+                                               "username": LoginManager.username})
 
 
 def dataAnalysis(request):
-    return render(request, "dataAnalysis.html", {"user": current_user})
+    return render(request, "dataAnalysis.html", {"username": LoginManager.username})
 
 
 def index(request):
-    return render(request, "index.html", {"user": current_user})
+    return render(request, "index.html", {"username": LoginManager.username})
 
 
 def projectDesc(request):
-    return render(request, "projectDesc.html", {"user": current_user})
+    return render(request, "projectDesc.html", {"username": LoginManager.username})
 
 
 def selfCenter(request):
-    return render(request, "selfCenter.html", {"user": current_user})
+    return render(request, "selfCenter.html", {"username": LoginManager.username})
 
 
 def tech(request):
-    return render(request, "tech.html", {"user": current_user})
+    return render(request, "tech.html", {"username": LoginManager.username})
 
 #
 # def factors_to_identify(request):
