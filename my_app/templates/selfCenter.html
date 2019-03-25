@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <script src="../static/js/jquery-1.12.4.js"></script>
+
+    <script src="../static/js/base.js"></script>
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+
+    <style>
+        .content{
+            width: 100%;
+            height: 900px;
+            border: 1px solid #ffffff;
+            box-sizing: border-box;
+        }
+        .content .photo{
+            text-align: center;
+            margin-top: 190px;
+        }
+        .content .photo img{
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+        }
+        .content .about{
+            width: 700px;
+            height: 450px;
+            background-color: #fff;
+            box-shadow: 0 0 20px 0 #d8d8d8;
+            margin: 0 auto;
+            margin-top: 30px;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+        .about .about_title{
+            text-align: center;
+            font-size: 24px;
+        }
+        .about .about_area{
+            text-align: left;
+            font-size: 16px;
+            line-height: 32px;
+            margin-top: 40px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--网页头部-->
+<div class="header">
+    <div class="header_left">
+        <a href="../index"><div class="logo"></div></a>
+        <div class="header_title">一带一路 电商影响因素识别系统</div>
+    </div>
+    <div class="header_right">
+        <ul class="nav_left">
+            <a href="../textMining"><li>文本挖掘</li></a>
+            <a href="../dataAnalysis"><li>大数据分析</li></a>
+            <a href="../tech"><li>技术实现</li></a>
+            <a href="../projectDesc"><li>项目介绍</li></a>
+            <a href="../selfCenter"><li>个人简介</li></a>
+        </ul>
+
+        <!--登录注册-->
+        <ul class="nav_right">
+            <h1>用户：{{user}}</h1>
+        </ul>
+
+        <!--用户登录成功-->
+        <ul class="nav_user">
+            <li class="user_img">
+                <ul class="sub">
+                    <li><a href="">设置</a></li>
+                    <li><a href="">退出</a></li>
+                </ul>
+            </li>
+            <li class="user_welcome">小名同学</li>
+        </ul>
+    </div>
+</div>
+
+<div class="content">
+    <div class="photo">
+        <img src="../static/img/个人.png">
+    </div>
+    <div class="about">
+        <div class="about_title">个人简介</div>
+        <div class="line"></div>
+        <div class="about_area">
+            <p>XXX 武汉纺织大学计算机科学与技术学院XXX班级陈薇。</p>
+            <!--<p>&nbsp;</p>-->
+            <p>在六年的学习里，做过语文小组长、数学小组长和学习委员。</p>
+            <!--<p>&nbsp;</p>-->
+            <p>个人兴趣广泛，喜爱文体活动，热爱自然科学，会弹钢琴，识乐谱，还具有一定的绘画能力。</p>
+            <!--<p>&nbsp;</p>-->
+            <p>有较强的组织能力和活动策划能力，有较强的语言表达能力，有较强的团队精神：在同学中，有良好的人际关系；在同学中有较高的威信；善于协同“作战”。</p>
+
+
+        </div>
+    </div>
+</div>
+
+<!--网页底部-->
+<div class="footer">
+    <div class="top">
+
+        <span class="QRcode"><img src="../static/img/QRcode.jpg"/> </span>
+        <a href="#"><div class="goback">回到顶部</div></a>
+
+    </div>
+    <div class="down">
+        <div class="selfInfo">
+            <a href="../selfCenter">个人简介</a>
+            |
+            <a href="../projectDesc">项目介绍</a>
+        </div>
+        <div class="copyright">
+            copyright@2017-2020 陈薇
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

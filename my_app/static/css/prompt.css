@@ -1,0 +1,25 @@
+/*警告条*/
+.prompt{
+    width: 100%;
+    height: 45px;
+    background-color: #00ba00;
+    color: white;
+    font-size: 14px;
+    line-height: 45px;
+    text-indent: 2em;
+    position: fixed;
+    top: 88px;
+    left: 0;
+    z-index: 999;
+    display: none;
+}
+.prompt .prompt_close{
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    position: absolute;
+    color: #ffffff;
+    font-size: 20px;
+    top: 0;
+    right: 20px;
+}

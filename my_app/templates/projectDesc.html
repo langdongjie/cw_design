@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+    <style>
+        .content{
+            width: 100%;
+            height: 800px;
+            font-family: "宋体";
+        }
+        .content .project_main{
+            width: 800px;
+            height: 800px;
+            margin: 0 auto;
+            margin-top: 190PX;
+
+            box-sizing: border-box;
+        }
+        .project_main .project_title{
+            font-size: 28px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .project_main .project_content{
+            font-size: 20px;
+            text-align: left;
+            text-indent: 2em;
+            margin-top: 40px;
+        }
+        .project_auther{
+            font-weight: bold;
+            text-align: right;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<!--网页头部-->
+<div class="header">
+    <div class="header_left">
+        <a href="../index"><div class="logo"></div></a>
+        <div class="header_title">一带一路 电商影响因素识别系统</div>
+    </div>
+    <div class="header_right">
+        <ul class="nav_left">
+            <a href="../textMining"><li>文本挖掘</li></a>
+            <a href="../dataAnalysis"><li>大数据分析</li></a>
+            <a href="../tech"><li>技术实现</li></a>
+            <a href="../projectDesc"><li>项目介绍</li></a>
+            <a href="../selfCenter"><li>个人简介</li></a>
+        </ul>
+
+        <!--登录注册-->
+        <ul class="nav_right">
+            <h1>用户：{{user}}</h1>
+        </ul>
+
+        <!--用户登录成功-->
+        <ul class="nav_user">
+            <li class="user_img">
+                <ul class="sub">
+                    <li><a href="">设置</a></li>
+                    <li><a href="">退出</a></li>
+                </ul>
+            </li>
+            <li class="user_welcome">小名同学</li>
+        </ul>
+    </div>
+</div>
+
+<!--网页内容-->
+<div class="content">
+    <div class="project_main">
+        <div class="project_title">一带一路 电商影响因素识别系统</div>
+        <div class="project_content">
+            <p>近年来，深度学习在高精度图像分割与语义标注领域得到了越来越广泛的 应用。随着深度卷积神经网络的成功，CNNs 在语义分割问题上变得非常流行。</p>
+            <p>&nbsp;</p>
+            <p>目前，这些成功应用的深度模型大都基于全卷积神经网络模型 FCNs。本项目将研究：给定一张自然图像或一段社交媒体视频，系统自动计算图像中各目标对象的语义分割与标注结果。尽管深度学习模型已经取得了一定的进步，但仍面临着许多诸如训练数据集匮乏的挑战。语义分割往往需要十分昂贵的精确到像素级别的语义标注。</p>
+            <p>&nbsp;</p>
+            <p>可以通过设计弱监督训练[Ge2018]来部分解决这些问题。深度模型的参数优化往往也会比较困难，需要经过大量运算获得较好的模型参数，进而也需要设计更加鲁棒的模型优化算法。深度卷积神经模型往往结构比较单一，需要设计解释性好的更加有效的模型来提高语义标注的分割精度。因此，此项目将研究用于解决像素级标注的数据进行弱 监督学习实现 自然场景中的图像视频语义分割与精确解析的视觉任务。</p>
+            <p>&nbsp;</p>
+
+                <p>（此处写系统架构及技术实现）</p>
+
+            </div>
+        <div class="project_auther">作者：陈薇</div>
+    </div>
+
+</div>
+
+<!--网页底部-->
+<div class="footer">
+    <div class="top">
+
+        <span class="QRcode"><img src="../static/img/QRcode.jpg"/> </span>
+        <a href="#"><div class="goback">回到顶部</div></a>
+
+    </div>
+    <div class="down">
+        <div class="selfInfo">
+            <a href="../selfCenter">个人简介</a>
+            |
+            <a href="../projectDesc">项目介绍</a>
+        </div>
+        <div class="copyright">
+            copyright@2017-2020 陈薇
+        </div>
+    </div>
+</div>
+</body>
+</html>

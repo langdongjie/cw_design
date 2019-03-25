@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+
+    <style>
+        body{
+            background-color: #ffffff;
+        }
+        .centent{
+            width: 100%;
+            height: 3000px;
+            background-color: #fff;
+        }
+        /*一带一路图片区域*/
+        .oneRoad{
+            width: 100%;
+            height: 550px;
+            margin-top: 88px;
+            background-color: red;
+            background: url("../static/img/header.jpg") no-repeat center center;
+            border: 1px solid #ffffff;
+            box-sizing: border-box;
+
+        }
+        .oneRoad .oneRoad_title{
+            font-family: "隶书";
+            font-size: 45px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 80px;
+        }
+        .oneRoad .onRoad_sub_title{
+            font-family: "隶书";
+            font-size: 22px;
+            text-align: center;
+            margin-top: 20px;
+            color: #333333;
+        }
+        /*文本挖掘宣传区域*/
+        .textMining{
+            width: 100%;
+            height: 590px;
+            margin-top: 20px;
+            background-color: blue;
+            background: url("../static/img/bg2.jpg") no-repeat center center;
+
+            border: 1px solid #ffffff;
+            box-sizing: border-box;
+        }
+        .textMining .main{
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            margin-top: 50px;
+            box-sizing: border-box;
+        }
+        .main .textLogo{
+            width: 100%;
+            height: 76px;
+            background: url("../static/img/爬虫.png") no-repeat center center;
+            background-size: 76px 76px;
+        }
+        .main .text_title{
+            text-align: center;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+
+        .line{
+            width: 30px;
+            height: 4px;
+            background-color: #336EFD;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+
+        .main .textArea{
+            width: 330px;
+            height: 160px;
+            line-height: 30px;
+            text-indent: 2em;
+            font-size: 16px;
+            color: #444444;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+
+        .learnMore{
+            width: 100px;
+            line-height: 30px;
+            font-size: 14px;
+            border: 1px solid #F5A623;
+            color: #F5A623;
+            text-align: center;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+        .main .learnMore{
+            margin: 0 auto;
+            margin-top: 45px;
+        }
+
+        .projectOther{
+            width: 100%;
+            height: 420px;
+            margin-top: 20px;
+            position: relative;
+        }
+        .projectOther .project_left{
+            width: 49.6%;
+            height: 100%;
+            background-color: #F6F4F5;
+            background: url("../static/img/bg4.jpg") no-repeat center center;
+            background-size: 100% 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .projectOther .project_right{
+            width: 49.6%;
+            height: 100%;
+            background: url("../static/img/bg5.png") no-repeat center center;
+            background-size: 100% 100%;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .project_left .project_introduce{
+            width: 350px;
+            height: 100%;
+            float: left;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .project_left .project_intr_title{
+            font-size: 20px;
+            font-weight: bold;
+            color: #222222;
+        }
+        .project_left .line{
+            background-color: #F5A623;
+            margin-left: 0;
+        }
+        .project_left .project_intr_area{
+            font-size: 14px;
+            line-height: 25px;
+            color: #555555;
+            margin-top: 30px;
+        }
+
+        .project_right .project_introduce{
+            width: 350px;
+            height: 100%;
+            float: left;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+        .project_right .project_intr_title{
+            font-size: 20px;
+            font-weight: bold;
+            color: #222222;
+        }
+        .project_right .line{
+            background-color: #F5A623;
+            margin-left: 0;
+        }
+        .project_right .project_intr_area{
+            font-size: 14px;
+            color: #555555;
+            line-height: 25px;
+            margin-top: 30px;
+        }
+
+
+        .learnMore:hover{
+            color: #ffffff;
+            background-color: #F5A623;
+        }
+        .content .moreInfo{
+            width: 100%;
+            height: 500px;
+            background: url("../static/img/bg10.jpg") no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            border: 0 solid #979797;
+            color: #FFFFFF;
+            margin-top: 50px;
+
+            position: relative;
+        }
+        .moreInfo .moreInfo_left{
+            width: 515px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.8;
+            background: #336EFD;
+            padding: 50px;
+            border: 0 solid #979797;
+            box-sizing: border-box;
+            z-index: 1;
+
+        }
+        .moreInfo .moreInfo_left .moreInfo_left_title{
+            font-size: 24px;
+            color: #FFFFFF;
+        }
+        .moreInfo .moreInfo_left .moreInfo_left_area{
+            line-height: 24px;
+            font-size: 14px;
+            margin-top: 40px;
+            color: #FFFFFF;
+        }
+        .moreInfo .moreInfo_left .learnMore{
+            color: white;
+            border: 1px solid #ffffff;
+            margin-top: 50px;
+        }
+        .moreInfo .moreInfo_left .learnMore:hover{
+            color: #336EFD;
+            background-color: #ffffff;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <!--网页头部-->
+    <div class="header">
+        <div class="header_left">
+            <a href="../index"><div class="logo"></div></a>
+            <div class="header_title">一带一路 电商影响因素识别系统</div>
+        </div>
+        <div class="header_right">
+            <ul class="nav_left">
+                <a href="../textMining"><li>文本挖掘</li></a>
+            <a href="../dataAnalysis"><li>大数据分析</li></a>
+            <a href="../tech"><li>技术实现</li></a>
+            <a href="../projectDesc"><li>项目介绍</li></a>
+            <a href="../selfCenter"><li>个人简介</li></a>
+            </ul>
+
+            <!--登录注册-->
+            <ul class="nav_right">
+                <h1>用户：{{user}}</h1>
+            </ul>
+
+            <!--用户登录成功-->
+            <ul class="nav_user">
+                <li class="user_img">
+                    <ul class="sub">
+                        <li><a href="">设置</a></li>
+                        <li><a href="">退出</a></li>
+                    </ul>
+                </li>
+                <li class="user_welcome">小名同学</li>
+            </ul>
+        </div>
+    </div>
+
+    <!--网页内容-->
+    <div class="content">
+        <div class="oneRoad">
+            <div class="oneRoad_title">“一带一路” 电商影响因素识别系统</div>
+            <div class="onRoad_sub_title">挖掘“一带一路”对电子商务的影响因子，发掘商业价值，预见经济融合的潜力</div>
+        </div>
+        <div class="textMining">
+            <div class="main">
+                <div class="textLogo"></div>
+                <div class="text_title">文本挖掘</div>
+                <div class="line"></div>
+                <div class="textArea">从浩瀚的网站中挖掘出有价值的信息，在大量的数据中挖掘出信息,通过认真分析来揭示数据之间有意义的联系、趋势和模式。寻找“一带一路”中的关键因子和影响因素。找到潜伏的规律以及看似无关事物之间背后的联系,据之间有意义的联系、趋势和模式。</div>
+                <a href="textMining"><div class="learnMore">了解更多</div></a>
+            </div>
+        </div>
+        <div class="projectOther">
+            <div class="project_left">
+                <!--项目介绍-->
+                <div class="project_introduce">
+                    <div class="project_intr_title">项目介绍</div>
+                    <div class="line"></div>
+                    <div class="project_intr_area">
+                        因素分析是利用指数体系分析或测定客观现象总体的总变动中各影响因素变动对其影响方向和程度的一种统计分析方法。
+
+                        是一种统计分析过程，能将智力测验的题目加以分类，使相互之间相关很高的测题聚为同一组，这些测题与其他组的测题之间则相对独立。这些彼此相互关联的测题所构成的组就被看作智力因素。
+                    </div>
+                    <a href="../projectDesc"><div class="learnMore">了解更多</div></a>
+                </div>
+            </div>
+            <div class="project_right">
+                <!--项目介绍-->
+                <div class="project_introduce">
+                    <div class="project_intr_title">技术实现</div>
+                    <div class="line"></div>
+                    <div class="project_intr_area">
+                        因素分析是利用指数体系分析或测定客观现象总体的总变动中各影响因素变动对其影响方向和程度的一种统计分析方法。
+
+                        是一种统计分析过程，能将智力测验的题目加以分类，使相互之间相关很高的测题聚为同一组，这些测题与其他组的测题之间则相对独立。这些彼此相互关联的测题所构成的组就被看作智力因素。
+                    </div>
+                    <a href="../tech."><div class="learnMore">了解更多</div></a>
+                </div>
+            </div>
+        </div>
+        <div class="moreInfo">
+            <div class="moreInfo_left">
+                <div class="moreInfo_left_title">数据分析</div>
+                <div class="moreInfo_left_area">数据分析是指用适当的统计分析方法对收集来的大量数据进行分析，提取有用信息和形成结论而对数据加以详细研究和概括总结的过程。这一过程也是质量管理体系的支持过程。在实用中，数据分析可帮助人们作出判断，以便采取适当行动。
+                    数据分析的数学基础在20世纪早期就已确立，但直到计算机的出现才使得实际操作成为可能，并使得数据分析得以推广。数据分析是数学与计算机科学相结合的产物。</div>
+                <a href="../dataAnalysis."><div class="learnMore">了解更多</div></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!--网页底部-->
+    <div class="footer">
+        <div class="top">
+
+            <span class="QRcode"><img src="../static/img/QRcode.jpg"/> </span>
+            <a href="#"><div class="goback">回到顶部</div></a>
+
+        </div>
+        <div class="down">
+            <div class="selfInfo">
+                <a href="../selfCenter">个人简介</a>
+                |
+                <a href="../projectDesc">项目介绍</a>
+            </div>
+            <div class="copyright">
+                copyright@2017-2020 陈薇
+            </div>
+        </div>
+    </div>
+</body>
+</html>

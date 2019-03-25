@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本挖掘</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+
+    <style>
+        .content{
+            width: 100%;
+            height: 1600px;
+        }
+        .content .search{
+            width: 700px;
+            height: 55px;
+            margin: 0 auto;
+            margin-top: 190px;
+        }
+        .search #search_input{
+            width: 568px;
+            height: 100%;
+            font-size: 16px;
+            border: 1px solid #999999;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            padding: 4px 12px 4px 30px;
+            border-right: 0;
+            box-sizing: border-box;
+            float: left;
+        }
+        .search #search_btn{
+            width: 132px;
+            height: 100%;
+            color: #ffffff;
+            font-size: 16px;
+            border: 1px solid #999999;
+            border-left: 0;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-sizing: border-box;
+            background-color: #336EFD;
+        }
+
+        /*词云*/
+        .content .wordCould{
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            margin-top: 100px;
+            box-sizing: border-box;
+        }
+        .wordCould .wordCould_title{
+            color: #222222;
+            font-family: "Arial";
+            font-size: 26px;
+            line-height: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .line{
+            width: 30px;
+            height: 4px;
+            background-color: #336EFD;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+        .wordCould .wordCould_img{
+            width: 800px;
+            height: 520px;
+            padding: 20px;
+            background-color: #fff;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 0 20px 0 #d8d8d8;
+            box-sizing: border-box;
+        }
+        .wordCould .wordCould_img img{
+            width: 650px;
+            height: 500px;
+        }
+
+        /*主题内容*/
+        .content .topic{
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            margin-top: 100px;
+            box-sizing: border-box;
+        }
+        .topic .topic_title{
+            color: #222222;
+            font-family: "Arial";
+            font-size: 26px;
+            line-height: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .topic .topic_area{
+            width: 800px;
+            height: 520px;
+            font-size: 18px;
+            line-height: 27px;
+            text-align: left;
+
+            padding: 50px;
+            background-color: #fff;
+            margin-top: 20px;
+            box-shadow: 0 0 20px 0 #d8d8d8;
+            box-sizing: border-box;
+        }
+
+
+    </style>
+
+</head>
+<body>
+<!--网页头部-->
+<div class="header">
+    <div class="header_left">
+        <a href="../index"><div class="logo"></div></a>
+        <div class="header_title">一带一路 电商影响因素识别系统</div>
+    </div>
+    <div class="header_right">
+        <ul class="nav_left">
+            <a href="../textMining"><li>文本挖掘</li></a>
+            <a href="../dataAnalysis"><li>大数据分析</li></a>
+            <a href="../tech"><li>技术实现</li></a>
+            <a href="../projectDesc"><li>项目介绍</li></a>
+            <a href="../selfCenter"><li>个人简介</li></a>
+        </ul>
+
+        <!--登录注册
+        <ul class="nav_right">
+            <h1>用户：{{user}}</h1>
+        </ul>-->
+
+        <!--用户登录成功-->
+        <ul class="nav_user">
+            <li class="user_img">
+                <ul class="sub">
+                    <li><a href="">设置</a></li>
+                    <li><a href="">退出</a></li>
+                </ul>
+            </li>
+            <li class="user_welcome">小名同学</li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="content">
+    <form method="post">
+        {% csrf_token %}
+    <div class="search">
+        <input id="search_input" type="text" name="url" value="{{url}}" placeholder="请输入网址">
+        <button id="search_btn" type="submit">文本挖掘</button>
+    </div>
+    </form>
+    <div class="wordCould">
+        <div class="wordCould_title">生成词云</div>
+        <div class="line"></div>
+        <div class="wordCould_img">
+            <img src="{{wordcloud}}"/>
+        </div>
+    </div>
+    <div class="topic">
+        <div class="topic_title">主题内容</div>
+        <div class="line"></div>
+        <div class="topic_area">
+
+            <p>{{summary}}</p>
+            <p>&nbsp;</p>
+            <p>但是在快速增长的背后，其暴露出来的问题也不容忽视。一方面，农产品的进口规模增长迅速，进口额从 2001 年 118.5 亿美元增长至 2015 年的 1168.8 亿美元，年均增长 17.76%，超过农产品出口增速。从 2004年开始，我国农产品贸易逆差已经成为常态，并呈不断扩大趋势。</p>
+            <p>&nbsp;</p>
+            <p>这对国内农产品生产者产生较大冲击，并且已经影响到我国部分农产品的产业安全；另一方面，我国农产品出口增长方式脆弱性问题突出，容易受到外部冲击的影响。2008 年全球经济危机，我国农产品出口贸易受到重挫，从 2002-2007 一直保持着的 10%以上的高增长率，下降到 2008 年的 10%以下，并继续下降到 2009 年的负值。除此之外，农产品质量不高，国际竞争力不足，出口增速放缓，频频受到非关税壁垒等问题都值得我们关注，而“一带一路”倡议的提出给中国农产品贸易的发展带来了新的机遇。</p>
+        </div>
+    </div>
+
+</div>
+
+<!--网页底部-->
+<div class="footer">
+    <div class="top">
+
+        <span class="QRcode"><img src="../static/img/QRcode.jpg"/> </span>
+        <a href="#"><div class="goback">回到顶部</div></a>
+
+    </div>
+    <div class="down">
+        <div class="selfInfo">
+            <a href="../selfCenter">个人简介</a>
+            |
+            <a href="../projectDesc">项目介绍</a>
+        </div>
+        <div class="copyright">
+            copyright@2017-2020 陈薇
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

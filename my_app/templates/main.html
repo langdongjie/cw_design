@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>测试页面</title>
+</head>
+<body>
+<form method="post">
+{% csrf_token %}
+<input type="text" value="{{ later_url }}" name="url" style="width: 500px; height: 40px;">
+<input type="submit" name="search" value="搜索" style="width: 120px; height: 60px;">
+    <img src="{{ wordcloud }}">
+    <h1>{{summary}}</h1>
+</form>
+</body>
+</html>

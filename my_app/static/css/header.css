@@ -1,0 +1,128 @@
+.header{
+    width: 100%;
+    height: 88px;
+    box-shadow: 0 0 20px 0 #d8d8d8;
+    background-color: #fff;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+.header .header_left{
+    width: 600px;
+    height: 100%;
+}
+.header_left .logo{
+    width: 50px;
+    height: 100%;
+    background: url("../img/logo.png") no-repeat center center;
+    background-size: 50px 50px;
+    margin-left: 80px;
+    margin-right: 20px;
+}
+.header_left .header_title{
+    width: 300px;
+    font-family: "宋体";
+    font-size: 20px;
+    font-weight:bold;
+    float: left;
+    position: absolute;
+    left: 150px;
+    top: 29px;
+}
+.header .header_right{
+    width: 600px;
+    height: 100%;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.header_right .nav_left{
+    list-style: none;
+    width: 400px;
+    line-height: 88px;
+
+    float: left;
+    display:flex;
+    justify-content: space-between;
+}
+
+.nav_left li{
+    height: 88px;
+    float: left;
+    box-sizing: border-box;
+}
+.nav_left li:hover{
+    border-bottom: 4px solid #3385ff;
+    color: #3385ff;
+}
+
+/*登录*/
+.header_right .nav_right{
+    width: 100px;
+    line-height: 88px;
+    float: left;
+    margin-left: 50px;
+    display:flex;
+    justify-content: space-between;
+    /*display: none;*/
+}
+.header .nav_right li{
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-top: 30px;
+    float: left;
+}
+.login{
+    background-color: #3385ff;
+    color: white;
+    border-radius:3px;
+}
+
+/*用户登录成功*/
+.header .nav_user{
+    width: 180px;
+    height: 90px;
+    margin-left: 20px;
+    float: right;
+    display: none;
+}
+.header .nav_user>li{
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    margin-top: 30px;
+    float: left;
+}
+
+.header .nav_user .user_img{
+    background: url("../img/用户1.png") no-repeat center center;
+    background-size: 30px 30px;
+}
+
+.header .nav_user .user_img:hover{
+    background: url("../img/用户2.png") no-repeat center center;
+    background-size: 30px 30px;
+}
+.header .nav_user .user_img:hover .sub li{
+    opacity: 0.8;
+}
+
+.sub{
+    width: 60px;
+    padding-top: 50px;
+}
+.sub>li{
+    width: 60px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #ffffff;
+    float: left;
+    transition: all 1s;
+    opacity: 0;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/base.css">
+    <link rel="stylesheet" href="../static/css/header.css">
+    <link rel="stylesheet" href="../static/css/footer.css">
+
+    <script src="../static/js/jquery-1.12.4.js"></script>
+    <script src="../static/js/echarts.min.js"></script>
+    <script src="../static/js/dataAnalysis.js"></script>
+    <style>
+        .content{
+            width: 100%;
+            height: 2300px;
+
+        }
+        .analysis_chart{
+            width: 1100px;
+            height: 600px;
+            margin: 0 auto;
+            margin-top: 200px;
+            box-sizing: border-box;
+
+        }
+        .analysis_chart .analysis_chart_title{
+            color: #222222;
+            font-family: "Arial";
+            font-size: 26px;
+            line-height: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .line{
+            width: 50px;
+            height: 4px;
+            background-color: #336EFD;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        .analysis_chart .main{
+            width: 100%;
+            height: 520px;
+            background-color: #fff;
+            box-shadow: 0 0 20px 0 #d8d8d8;
+            position: relative;
+        }
+        .analysis_chart .main .chart{
+            width: 100%;
+            height: 500px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .dataOrigin{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            font-size: 13px;
+            line-height: 20px;
+            color: #666666;
+        }
+
+        .analysis_chart:nth-child(2){
+            /*background-color: red;*/
+        }
+        .analysis_chart:nth-child(3){
+            /*background-color: blue;*/
+        }
+    </style>
+
+
+
+</head>
+<body>
+<!--网页头部-->
+<div class="header">
+    <div class="header_left">
+        <a href="../index"><div class="logo"></div></a>
+        <div class="header_title">一带一路 电商影响因素识别系统</div>
+    </div>
+    <div class="header_right">
+        <ul class="nav_left">
+            <a href="../textMining"><li>文本挖掘</li></a>
+            <a href="../dataAnalysis"><li>大数据分析</li></a>
+            <a href="../tech"><li>技术实现</li></a>
+            <a href="../projectDesc"><li>项目介绍</li></a>
+            <a href="../selfCenter"><li>个人简介</li></a>
+        </ul>
+
+        <!--登录注册-->
+        <ul class="nav_right">
+            <h1>用户：{{user}}</h1>
+        </ul>
+
+        <!--用户登录成功-->
+        <ul class="nav_user">
+            <li class="user_img">
+                <ul class="sub">
+                    <li><a href="">设置</a></li>
+                    <li><a href="">退出</a></li>
+                </ul>
+            </li>
+            <li class="user_welcome">小名同学</li>
+        </ul>
+    </div>
+</div>
+
+<div class="content">
+    <div class="analysis_chart">
+        <div class="analysis_chart_title">外贸出口先导指数</div>
+        <div class="line"></div>
+        <div class="main">
+            <div class="chart" id="oneChart"></div>
+            <div class="dataOrigin">数据来源：海关总署</div>
+        </div>
+
+    </div>
+    <div class="analysis_chart">
+        <div class="analysis_chart_title">海上丝路贸易指数</div>
+        <div class="line"></div>
+        <div class="main">
+            <div class="chart" id="twoChart"></div>
+            <div class="dataOrigin">数据来源：宁波航运交易所</div>
+        </div>
+    </div>
+    <div class="analysis_chart">
+        <div class="analysis_chart_title">“一带一路”航贸指数</div>
+        <div class="line"></div>
+        <div class="main">
+            <div class="chart" id="threeChart"></div>
+            <div class="dataOrigin">数据来源：上海航运交易所</div>
+        </div>
+    </div>
+</div>
+
+
+<!--网页底部-->
+<div class="footer">
+    <div class="top">
+
+        <span class="QRcode"><img src="../static/img/QRcode.jpg"/> </span>
+        <a href="#"><div class="goback">回到顶部</div></a>
+
+    </div>
+    <div class="down">
+        <div class="selfInfo">
+            <a href="../selfCenter">个人简介</a>
+            |
+            <a href="../projectDesc">项目介绍</a>
+        </div>
+        <div class="copyright">
+            copyright@2017-2020 陈薇
+        </div>
+    </div>
+</div>
+</body>
+</html>
