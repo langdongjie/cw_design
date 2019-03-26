@@ -1,3 +1,5 @@
+import sys
+
 from django.shortcuts import render
 
 # coding:utf-8
@@ -33,16 +35,16 @@ def register(request):
 
 def textMining(request):
     url = ""
-    wordcloud_path = ""
-    summary_str = ""
+    wordcloud_path = '../static/image/word.png'
+    summary_list = ["（请输入您要获取信息的网址！！！）"]
     if request.method == 'POST':
         url = request.POST.get('url')
         re = Recognition(url)
         wordcloud_path = re.get_wordcloud()
-        summary_str = re.get_summary(3)
+        summary_list = re.get_summary(6)
     return render(request, "textMining.html", {"url": url,
                                                "wordcloud": wordcloud_path,
-                                               "summary": summary_str,
+                                               "summary": summary_list,
                                                "username": LoginManager.username})
 
 

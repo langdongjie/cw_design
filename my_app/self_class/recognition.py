@@ -18,7 +18,7 @@ class Recognition:
     def get_wordcloud(self):
         con = jieba.lcut(self.text)  # 分词
         words = " ".join(con)  # 分词后插入空格
-        wordcloud = WordCloud(font_path="simkai.ttf",background_color="white",width=800, height=600).generate(words)
+        wordcloud = WordCloud(font_path="simkai.ttf",background_color="white",width=400, height=300).generate(words)
         timestamp = str(time.strftime('%Y%m%d_%H%M%M',time.localtime(time.time())))
         img_path = 'my_app/static/image/'+timestamp+'.png'
         wordcloud.to_file(img_path)
@@ -26,4 +26,4 @@ class Recognition:
 
     def get_summary(self, limit):
         s = SnowNLP(self.text)
-        return "\n".join(s.summary(limit=limit))
+        return s.summary(limit=limit)
